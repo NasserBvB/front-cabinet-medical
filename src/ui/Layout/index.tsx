@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { AiOutlineLock, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 import {
   Content,
@@ -8,7 +9,7 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  Wrapper,
+  Wrapper
 } from "./styles";
 
 type LayoutProps = {
@@ -20,36 +21,51 @@ export default function Layout({ children }: LayoutProps) {
   const toggleMenu = () => {
     setDisplayMenu((cur) => !cur);
   };
-  const mmenuRef = React.useRef(null);
-  useOutsideAlerter(mmenuRef, setDisplayMenu);
+  const menuRef = React.useRef(null);
+  useOutsideAlerter(menuRef, setDisplayMenu);
   return (
     <>
       <Wrapper>
         <Content>{children}</Content>
         <Header>
-          <MenuButton ref={mmenuRef} onClick={toggleMenu}>
+          <MenuButton onClick={toggleMenu}>
             <AiOutlineMenu />
           </MenuButton>
         </Header>
-        <Footer>Footer</Footer>
-        <Menu id="menu" className={displayMenu ? "inline" : "none"}>
+        <Footer>Cabinet medical {new Date().getFullYear()}©</Footer>
+        <Menu
+          id="menu"
+          className={displayMenu ? "inline" : "none"}
+        >
           <MenuItem className="BigItem">
             <strong>Medical app</strong>
-            <MenuItem>Item 1</MenuItem>
-
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 1</MenuItem>
+            <Link to="/">
+              <MenuItem>Dashboard</MenuItem>
+            </Link>
+            <Link to="/consultation">
+              <MenuItem>Consultation</MenuItem>
+            </Link>
+            <Link to="/medicaments">
+              <MenuItem>Medicaments</MenuItem>
+            </Link>
+            <Link to="#">
+              <MenuItem>Autre</MenuItem>
+            </Link>
           </MenuItem>
           <hr />
 
           <MenuItem className="BigItem">
             <strong>General</strong>
-            <MenuItem>
-              <AiOutlineUser /> Profile
-            </MenuItem>
-            <MenuItem>
-              <AiOutlineLock /> Logout
-            </MenuItem>
+            <Link to="/profile">
+              <MenuItem>
+                <AiOutlineUser /> Profile
+              </MenuItem>
+            </Link>
+            <Link to="/">
+              <MenuItem>
+                <AiOutlineLock /> Logout
+              </MenuItem>
+            </Link>
           </MenuItem>
         </Menu>
       </Wrapper>
