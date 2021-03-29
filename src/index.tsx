@@ -9,6 +9,20 @@ ReactDOM.render(
       <h1>export default </h1>
       <h1>export default </h1>
       <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
+      <h1>export default </h1>
     </Layout>
   </React.StrictMode>,
   document.getElementById("root")

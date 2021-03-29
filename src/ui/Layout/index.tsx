@@ -1,5 +1,15 @@
 import React, { ReactNode } from "react";
-import { Content, Footer, Header, Menu, MenuButton, Wrapper } from "./styles";
+import { AiOutlineLock, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import {
+  Content,
+  Footer,
+  Header,
+  Menu,
+  MenuButton,
+  MenuItem,
+  Wrapper,
+} from "./styles";
 
 type LayoutProps = {
   children: ReactNode;
@@ -10,24 +20,37 @@ export default function Layout({ children }: LayoutProps) {
   const toggleMenu = () => {
     setDisplayMenu((cur) => !cur);
   };
+  const mmenuRef = React.useRef(null);
+  useOutsideAlerter(mmenuRef, setDisplayMenu);
   return (
     <>
       <Wrapper>
         <Content>{children}</Content>
         <Header>
-          <MenuButton onClick={toggleMenu}>menu</MenuButton>
+          <MenuButton ref={mmenuRef} onClick={toggleMenu}>
+            <AiOutlineMenu />
+          </MenuButton>
         </Header>
         <Footer>Footer</Footer>
         <Menu id="menu" className={displayMenu ? "inline" : "none"}>
-          <p>
-            Pariatur occaecat sunt esse amet aliqua exercitation sint veniam
-            consectetur ipsum elit occaecat. Ex cupidatat cillum anim laboris
-            ipsum Lorem reprehenderit deserunt aliqua. Ut duis voluptate
-            consequat aliqua sit et. Velit id duis ad eiusmod amet aliquip
-            deserunt consequat. Ullamco excepteur ullamco fugiat quis deserunt
-            labore pariatur commodo incididunt voluptate ullamco. Voluptate
-            commodo Lorem culpa ipsum.
-          </p>
+          <MenuItem className="BigItem">
+            <strong>Medical app</strong>
+            <MenuItem>Item 1</MenuItem>
+
+            <MenuItem>Item 1</MenuItem>
+            <MenuItem>Item 1</MenuItem>
+          </MenuItem>
+          <hr />
+
+          <MenuItem className="BigItem">
+            <strong>General</strong>
+            <MenuItem>
+              <AiOutlineUser /> Profile
+            </MenuItem>
+            <MenuItem>
+              <AiOutlineLock /> Logout
+            </MenuItem>
+          </MenuItem>
         </Menu>
       </Wrapper>
     </>

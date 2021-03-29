@@ -19,13 +19,19 @@ export const Wrapper = styled.div`
         grid-template-rows: 8vh auto 8vh;
       }
       grid-auto-flow: dense;
-      
+      background-color: whitesmoke;
 `;
 
 export const Header = styled.div`
-background-color: #626685;
   grid-area: header;
   max-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1000;
+  padding: 16px;
+  left: 165px;
+  background-color: RGBA(0,0,0,0.5);
 `
 
 export const Menu = styled.div`
@@ -36,22 +42,37 @@ export const Menu = styled.div`
     left: 25px;
     border: 1px solid #658685;
     border-radius: 6px;
+    max-height: 90vh;
   }
     padding: 8px;
+    z-index: 8253;
   background-color: #658685;
   grid-area: menu;
-  max-width: 150px;
+  max-width: 200px;
+  overflow-y: scroll;
 `
 
 export const MenuButton = styled.div`
   cursor: pointer;
-  background-color: #658625;
   display: none;
+  padding: 8px;
   @media (max-width: 420px) {
-    display: inline;
-    position: absolute;
+    display: flex;
   }
 `
+
+export const MenuItem = styled.div`
+  padding:8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: space-evenly;
+  display: flex;
+  &.BigItem {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+`
+
 
 export const Content = styled.div`
 background-color: #666666;
