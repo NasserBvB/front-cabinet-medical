@@ -21,8 +21,8 @@ export default function Layout({ children }: LayoutProps) {
   const toggleMenu = () => {
     setDisplayMenu((cur) => !cur);
   };
-  const menuRef = React.useRef(null);
-  useOutsideAlerter(menuRef, setDisplayMenu);
+  const mmenuRef = React.useRef(null);
+  useOutsideAlerter(mmenuRef, setDisplayMenu);
   return (
     <>
       <Wrapper>
@@ -34,6 +34,7 @@ export default function Layout({ children }: LayoutProps) {
         </Header>
         <Footer>Cabinet medical {new Date().getFullYear()}©</Footer>
         <Menu
+          ref={mmenuRef}
           id="menu"
           className={displayMenu ? "inline" : "none"}
         >

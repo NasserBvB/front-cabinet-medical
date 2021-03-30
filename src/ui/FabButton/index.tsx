@@ -1,10 +1,14 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { Wrapper } from "./styles";
-interface IProps {
+interface IProps extends HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
-const FabButton = (props: IProps) => {
-  return <Wrapper onClick={props.onClick}>{props.children}</Wrapper>;
+const FabButton = ({ children, onClick, ...rest }: IProps) => {
+  return (
+      <Wrapper onClick={onClick} {...rest}>
+        {children}
+      </Wrapper>
+  );
 };
 export default FabButton;

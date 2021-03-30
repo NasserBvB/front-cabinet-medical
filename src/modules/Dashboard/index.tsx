@@ -1,13 +1,11 @@
 import React from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-import Card from "ui/Card";
-import Modal from "ui/CustomModal";
-import FabButton from "ui/FabButton";
 import Layout from "ui/Layout";
+import Filter from "./components/Filter";
 import { Wrappper } from "./styles.";
 export default function Dashboard() {
   const [open, setOpen] = React.useState(false);
-
+const [cin, setCin] = React.useState("");
+const handmeFilter = () => {};
   const handleClick = () => {
     setOpen((cur) => !cur);
   };
@@ -18,29 +16,12 @@ export default function Dashboard() {
   return (
     <Layout>
       <Wrappper>
-        <Card>
-          Amet aute non laborum exercitation do eu magna aliquip laborum.
-        </Card>
-        <Card>
-          Amet aute non laborum exercitation do eu magna aliquip laborum.
-        </Card>
-        <Card>
-          Amet aute non laborum exercitation do eu magna aliquip laborum.
-        </Card>
-        <Card>
-          Amet aute non laborum exercitation do eu magna aliquip laborum.
-        </Card>
-        <Card>
-          Amet aute non laborum exercitation do eu magna aliquip laborum.
-        </Card>
+          <Filter cin={cin} setCin={setCin} handleFilter={handmeFilter} />
       </Wrappper>
 
-      <FabButton onClick={handleClick}>
+      {/* <FabButton onClick={handleClick}>
         <AiOutlinePlus size="25px" />
-      </FabButton>
-      <Modal open={open} closeModal={toggleModal}>
-        <p>jhjh</p>
-      </Modal>
+      </FabButton> */}
     </Layout>
   );
 }

@@ -1,20 +1,19 @@
 import React from "react";
-import { default as CustomModal } from "react-modal";
+import { default as CustomModal, Props } from "react-modal";
 import { modalStyles } from "./styles";
 
-interface IProps {
-  open: boolean;
+interface IProps extends Props {
   closeModal: () => void;
   children: React.ReactNode;
 }
-const Modal = (props: IProps) => {
+const Modal = ({ closeModal, children, ...rest }: IProps) => {
   return (
     <CustomModal
-      isOpen={props.open}
-      onRequestClose={props.closeModal}
+    onRequestClose={closeModal}
       style={modalStyles}
+      {...rest}
     >
-      {props.children}
+      {children}
     </CustomModal>
   );
 };

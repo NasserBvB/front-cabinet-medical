@@ -48,11 +48,6 @@ const UserDispatchContext = createContext<{
 
 const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = React.useReducer(userReducer, initialState);
-  const [open, setOpen] = React.useState(state.isError || state.isSuccess);
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const checkUser = async () => {
     const token = localStorage.getItem("authorization");
@@ -63,7 +58,6 @@ const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   React.useEffect(() => {
     checkUser();
-    setOpen(state.isError || state.isSuccess);
   }, [state.isError, state.isSuccess]);
 
   return (

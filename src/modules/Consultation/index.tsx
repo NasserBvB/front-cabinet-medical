@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
-import Card from "ui/Card";
+import { Card } from "ui/Card";
 import Modal from "ui/CustomModal";
 import FabButton from "ui/FabButton";
 import Layout from "ui/Layout";
@@ -34,7 +34,7 @@ export default function Consultations() {
       <FabButton onClick={handleClick}>
         <AiOutlinePlus size="25px" />
       </FabButton>
-      <Modal open={open} closeModal={toggleModal}>
+      <Modal isOpen={open} closeModal={toggleModal}>
         <p>jhjh</p>
       </Modal>
     </Layout>
