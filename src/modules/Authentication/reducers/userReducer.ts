@@ -1,10 +1,10 @@
 import {
     FETCH_ALL_USERS,
-    FETCH_CAMPUSES,
-    FETCH_ETUDIANTS,
-    FETCH_MODALITE_PAIEMENTS,
-    FETCH_PROGRAMS,
-    FILTER_FACTURES,
+
+
+
+
+
     IAuthState, IS_ERROR,
     IS_SUCCESS,
     LOADING,
@@ -58,32 +58,7 @@ export const userReducer = (state: IAuthState, action: IAction): IAuthState => {
                 isSuccess: action.payload.isSuccess,
                 success: action.payload.success,
             };
-        case FILTER_FACTURES:
-            return {
-                ...state,
-                factures: action.payload.factures,
-            };
-        case FETCH_CAMPUSES:
-            return {
-                ...state,
-                campuses: action.payload.campuses,
-            };
-        case FETCH_ETUDIANTS:
-            return {
-                ...state,
-                etudiants: action.payload.etudiants,
-            };
-        case FETCH_PROGRAMS:
-            return {
-                ...state,
-                programs: action.payload.programs,
-            };
-        case FETCH_MODALITE_PAIEMENTS:
-            return {
-                ...state,
-                modalite_paiements: action.payload.modalite_paiements,
-            };
-
+      
         default:
             return state;
     }
