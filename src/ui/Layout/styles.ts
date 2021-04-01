@@ -94,8 +94,8 @@ export const Content = styled.div`
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   border: 1px solid #658685;
   border-radius: 6px;
   box-shadow: 1px 1px 8px 2px #9899a1;

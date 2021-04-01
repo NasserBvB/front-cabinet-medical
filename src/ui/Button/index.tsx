@@ -1,10 +1,11 @@
 import { useTheme } from "@emotion/react";
 import React, { CSSProperties, HTMLAttributes } from "react";
+import { IColor } from "utils";
 import { Wrapper } from "./styles";
 interface IProps extends HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'filled' | 'outlined' | 'text';
-  color?: 'primary' | 'secondary' | 'warning' | 'success' | 'error';
+  variant?: "filled" | "outlined" | "text";
+  color?: IColor;
 }
 export default function Button({ color = 'primary', variant = 'filled', children, ...rest }: IProps) {
   const { palette } = useTheme();
@@ -14,8 +15,8 @@ export default function Button({ color = 'primary', variant = 'filled', children
 
   if (variant === 'text')
   {
-    outlined.backgroundColor = palette.divider
-    outlined.color = palette[color].dark
+    outlined.backgroundColor = "#FFF";
+    outlined.color = palette[color].dark;
   };
 
   if (variant === 'filled')

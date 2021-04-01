@@ -65,6 +65,8 @@ export type IMonthFilter = {
 };
 
 
+export type IColor = "error" | "success" | "primary" | "secondary" | "warning"; 
+
 export interface IPatient {
   id: number;
   patientId: string;

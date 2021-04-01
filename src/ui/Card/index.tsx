@@ -14,7 +14,7 @@ import {
   SpecWrapper,
   StatusWrapper,
   TitleWrapper,
-  Wrapper,
+  Wrapper
 } from "./styles";
 
 interface CardWrapper extends HTMLAttributes<HTMLDivElement> {
@@ -27,22 +27,20 @@ export const Card = ({ children, ...rest }: CardWrapper) => {
 
 type CardHeaderProps = {
   children: React.ReactNode;
-  isVApp: boolean;
 };
 
-export const CardHeader = ({ children, isVApp }: CardHeaderProps) => {
-  return <HeaderWrapper isVApp={isVApp}>{children}</HeaderWrapper>;
+export const CardHeader = ({ children }: CardHeaderProps) => {
+  return <HeaderWrapper >{children}</HeaderWrapper>;
 };
 
 type CardTitleProps = {
   title: string;
-  isVApp: boolean;
 };
 
-export const CardTitle = ({ isVApp, title }: CardTitleProps) => {
+export const CardTitle = ({  title }: CardTitleProps) => {
   return (
     <TitleWrapper>
-      <h3>{title}</h3>
+      <strong>{title}</strong>
     </TitleWrapper>
   );
 };
@@ -89,16 +87,14 @@ export const CardInfo = ({ name, value }: CardInfoProps) => {
 
 type CardActionsProps = {
   children?: React.ReactNode;
-  isVApp: boolean;
 };
 
-export const CardActions = ({ children, isVApp }: CardActionsProps) => {
+export const CardActions = ({ children }: CardActionsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <ActionsWrapper isVApp={isVApp}>
+    <ActionsWrapper >
       {children}
       <MenuWrapper
-        isVApp={isVApp}
         onClick={() => setIsOpen(!isOpen)}
       ></MenuWrapper>
     </ActionsWrapper>

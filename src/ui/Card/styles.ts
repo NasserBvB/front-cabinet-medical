@@ -9,12 +9,11 @@ type HeaderWrapperProps = {
   isVApp: boolean;
 };
 
-export const HeaderWrapper = styled.div<HeaderWrapperProps>`
+export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({ theme, isVApp }) =>
-    isVApp ? "#fafafa" : theme.palette.primary.main};
+  background-color: ${({ theme }) => theme.palette.primary.main};
   border: 1px solid ${({ theme }) => theme.palette.divider};
   border-bottom: 0;
   border-radius: 1rem 1rem 0 0;
@@ -25,17 +24,17 @@ export const HeaderWrapper = styled.div<HeaderWrapperProps>`
 export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   h3 {
     margin: 0 1rem;
   }
 `;
 
-export const ActionsWrapper = styled.div<HeaderWrapperProps>`
+export const ActionsWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: ${({ theme, isVApp }) =>
-    isVApp ? "#fafafa" : theme.palette.divider};
+  justify-content: flex-end;
+  background-color: ${({ theme }) => theme.palette.divider};
   border: 1px solid ${({ theme }) => theme.palette.divider};
   border-bottom: 0;
   border-radius: 0 0 1rem 1rem;
@@ -47,16 +46,11 @@ type MenuWrapperProps = {
   isVApp: boolean;
 };
 
-export const MenuWrapper = styled.div<MenuWrapperProps>`
+export const MenuWrapper = styled.div`
   font-size: 3rem;
   margin-top: -1.5rem;
   font-weight: bold;
   cursor: pointer;
-  ${({ isVApp }) =>
-    isVApp &&
-    `
-    color: #000;
-  `}
 `;
 
 export const RowsWrapper = styled.div`

@@ -1,3 +1,4 @@
+
 export const modalStyles = {
     content: {
         top: "40%",
@@ -6,5 +7,6 @@ export const modalStyles = {
         transform: "translate(-50%, -50%)",
         maxWidth: "450px",
         minWidth: "300px",
+        minHeight: "min-Content",
     },
 };

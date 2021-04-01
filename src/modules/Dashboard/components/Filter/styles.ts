@@ -8,14 +8,24 @@ export const Wrapper = styled.div`
 `
 
 export const Results = styled.div`
-    margin-top: 8px;
-    padding: 8px;
-    display: grid;
-    gap: 10px;
-    justify-content: flex-start;
-    grid-template-columns: 1fr;   
-    /* align-items: center; */
-`
+  position: relative;
+  margin-top: 8px;
+  padding: 8px;
+  display: grid;
+  gap: 10px;
+  justify-content: flex-start;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  min-width: 80%;
+  @media (max-width: 850px) {
+    min-width: 30%;
+  }
+
+  @media (max-width: 600px) {
+    min-width: 40%;
+  }
+
+  /* align-items: center; */
+`;
 
 export const Header = styled.div`
 `;
