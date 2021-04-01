@@ -5,10 +5,6 @@ export const Wrapper = styled.div`
   /* padding: ${({ theme }) => theme.spacing.md}; */
 `;
 
-type HeaderWrapperProps = {
-  isVApp: boolean;
-};
-
 export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -41,10 +37,6 @@ export const ActionsWrapper = styled.div`
   color: #fff;
   padding: 4px 16px;
 `;
-
-type MenuWrapperProps = {
-  isVApp: boolean;
-};
 
 export const MenuWrapper = styled.div`
   font-size: 3rem;

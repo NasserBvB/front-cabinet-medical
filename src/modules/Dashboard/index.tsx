@@ -5,8 +5,8 @@ import Layout from "ui/Layout";
 import PatientForm from "./components/PatientForm";
 export default function Dashboard() {
   // const [open, setOpen] = React.useState(false);
-const [cin, setCin] = React.useState("");
-const handmeFilter = () => {};
+  // const [cin, setCin] = React.useState("");
+  // const handmeFilter = () => {};
   const handleClick = () => {
     // setOpen((cur) => !cur);
   };
