@@ -1,19 +1,18 @@
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Card } from "ui/Card";
-import Modal from "ui/CustomModal";
 import FabButton from "ui/FabButton";
 import Layout from "ui/Layout";
 import { Wrappper } from "./styles";
 export default function Consultations() {
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
-    setOpen((cur) => !cur);
+    // setOpen((cur) => !cur);
   };
-  const toggleModal = () => {
-    setOpen((cur) => !cur);
-  };
+  // const toggleModal = () => {
+  //   setOpen((cur) => !cur);
+  // };
 
   return (
     <Layout>
@@ -34,9 +33,6 @@ export default function Consultations() {
       <FabButton onClick={handleClick}>
         <AiOutlinePlus size="25px" />
       </FabButton>
-      <Modal isOpen={open} closeModal={toggleModal}>
-        <p>jhjh</p>
-      </Modal>
     </Layout>
   );
 }
