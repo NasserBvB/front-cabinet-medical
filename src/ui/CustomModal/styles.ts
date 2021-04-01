@@ -18,4 +18,8 @@ export const Wrapper = styled.div`
   border-radius: 6px;
   box-shadow: 1px 1px 8px 2px #9899a1;
   padding: 16px;
+  min-width: 500px;
+  @media (max-width: 600px) {
+    min-width: 300px;
+  }
 `;
