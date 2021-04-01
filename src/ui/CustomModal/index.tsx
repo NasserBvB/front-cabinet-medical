@@ -1,20 +1,17 @@
 import React from "react";
-import { default as CustomModal, Props } from "react-modal";
-import { modalStyles } from "./styles";
+import { default as Popup } from "reactjs-popup";
+import { Wrapper } from "./styles";
 
-interface IProps extends Props {
+interface IProps  {
   closeModal: () => void;
   children: React.ReactNode;
+  open: boolean;
 }
-const Modal = ({ closeModal, children, ...rest }: IProps) => {
+const Modal = ({ closeModal, children, open }: IProps) => {
   return (
-    <CustomModal
-    onRequestClose={closeModal}
-      style={modalStyles}
-      {...rest}
-    >
-      {children}
-    </CustomModal>
+    <Popup open={open} onClose={closeModal}>
+      <Wrapper>{children}</Wrapper>
+    </Popup>
   );
 };
 export default Modal;

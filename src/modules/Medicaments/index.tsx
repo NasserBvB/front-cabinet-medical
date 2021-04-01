@@ -139,11 +139,11 @@ export default function Medicaments() {
         <AiOutlinePlus size="25px" />
       </FabButton>
 
-      <Modal closeModal={handleClose} isOpen={openNewMedicament}>
+      <Modal closeModal={handleClose} open={openNewMedicament}>
         <NewMedicament type="create" handleChange={handleChangeNewMed} {...newMed} handleSubmit={handleCreate} />
       </Modal>
 
-      <Modal closeModal={handleCloseModification} isOpen={openUpdateMedicament}>
+      <Modal closeModal={handleCloseModification} open={openUpdateMedicament}>
         <NewMedicament type='update' handleChange={handleChangeUpdateMed}
           {...selectedMed}
           handleSubmit={handleUpdate}

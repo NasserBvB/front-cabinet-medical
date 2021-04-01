@@ -40,7 +40,7 @@ export default function Medicament(props: Iprops) {
           <AiOutlineSetting size="20px" />
         </Button>
       </CardActions>
-      <Modal closeModal={handleClose} isOpen={open}>
+      <Modal closeModal={handleClose} open={open}>
         <CardTitle title="Are you sure you want to delete this item ?" />
         <ButtonsSure>
           <Button color="error" variant="text">

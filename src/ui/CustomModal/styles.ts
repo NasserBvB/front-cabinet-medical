@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 
 export const modalStyles = {
     content: {
@@ -10,3 +11,11 @@ export const modalStyles = {
         minHeight: "min-Content",
     },
 };
+
+export const Wrapper = styled.div`
+  background-color: white;
+  border: 1px solid ${(props) => props.theme.palette.divider};
+  border-radius: 6px;
+  box-shadow: 1px 1px 8px 2px #9899a1;
+  padding: 16px;
+`;
