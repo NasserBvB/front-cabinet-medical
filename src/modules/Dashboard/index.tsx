@@ -1,27 +1,30 @@
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
+import Modal from "ui/CustomModal";
 import FabButton from "ui/FabButton";
 import Layout from "ui/Layout";
+import Filter from "./components/Filter";
 import PatientForm from "./components/PatientForm";
 export default function Dashboard() {
-  // const [open, setOpen] = React.useState(false);
-  // const [cin, setCin] = React.useState("");
-  // const handmeFilter = () => {};
-  const handleClick = () => {
-    // setOpen((cur) => !cur);
+  const [open, setOpen] = React.useState(false);
+  const [cin, setCin] = React.useState("");
+  const handleFilter = () => {};
+  const toggleModal = () => {
+    setOpen((cur) => !cur);
   };
-  // const toggleModal = () => {
-  //   setOpen((cur) => !cur);
-  // };
-
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
   return (
     <Layout>
-      <PatientForm handleClick={handleClick} />
-      {/* <Filter cin={cin} setCin={setCin} handleFilter={handmeFilter} /> */}
+      <Filter cin={cin} setCin={setCin} handleFilter={handleFilter} />
 
-      <FabButton onClick={handleClick}>
+      <FabButton onClick={toggleModal}>
         <AiOutlinePlus size="25px" />
       </FabButton>
+      <Modal open={open} closeModal={handleCloseModal}>
+        <PatientForm handleClick={toggleModal} />
+      </Modal>
     </Layout>
   );
 }

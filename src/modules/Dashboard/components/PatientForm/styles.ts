@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const Fields = styled.div`
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 210px));
+    grid-template-columns: repeat(auto-fit, minmax(180px, min-content));
     gap: 5px;
     padding: 16px;
 `
