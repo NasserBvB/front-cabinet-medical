@@ -7,34 +7,48 @@ import {
   CardHeader,
   CardRow,
   CardRows,
-  CardTitle,
+  CardTitle
 } from "ui/Card";
-interface IProps {
-  patient?: any;
-}
-export default function Patient({ patient }: IProps) {
+import { IPatient } from "utils";
+import { Body, BodyItem } from "./styles";
+interface IProps extends IPatient {}
+export default function Patient({
+  nomcomplet,
+  cin,
+  tel,
+  anneenaissance,
+  adresse,
+  journaissance,
+  moisnaissance,
+  id,
+}: IProps) {
   return (
     <Card>
-      <CardHeader isVApp={false}>
-        <CardTitle isVApp={true} title="result 1" />
+      <CardHeader >
+        <CardTitle title={nomcomplet} />
       </CardHeader>
       <CardRows>
         <CardRow withBorder={true}>
-          <p>
-            Nostrud sint eu amet magna do mollit voluptate culpa ullamco
-            exercitation elit.
-          </p>
-          <p>
-            Nostrud sint eu amet magna do mollit voluptate culpa ullamco
-            exercitation elit.
-          </p>
-          <p>
-            Nostrud sint eu amet magna do mollit voluptate culpa ullamco
-            exercitation elit.
-          </p>
+          <Body>
+            <BodyItem>
+              CIN: <strong>{cin}</strong>{" "}
+            </BodyItem>
+            <BodyItem>
+              Adresse: <strong>{adresse}</strong>{" "}
+            </BodyItem>
+            <BodyItem>
+              Telephone: <strong>{tel}</strong>{" "}
+            </BodyItem>
+            <BodyItem>
+              Date de naissance:
+              <strong>
+                {journaissance}/{moisnaissance}/{anneenaissance}
+              </strong>
+            </BodyItem>
+          </Body>
         </CardRow>
       </CardRows>
-      <CardActions isVApp={false}>
+      <CardActions >
         <Button variant="filled" color="warning" title="Plus de details">
           <AiOutlineMore />
         </Button>
