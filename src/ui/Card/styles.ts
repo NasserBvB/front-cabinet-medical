@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
+import { IColor } from "utils";
 
 export const Wrapper = styled.div`
   /* border: 1px solid ${({ theme }) => theme.palette.divider}; */
   /* padding: ${({ theme }) => theme.spacing.md}; */
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.div<{color: IColor}>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.palette.primary.main};
+  background-color: ${({ theme, color }) => theme.palette[color].main};
   border: 1px solid ${({ theme }) => theme.palette.divider};
   border-bottom: 0;
   border-radius: 1rem 1rem 0 0;

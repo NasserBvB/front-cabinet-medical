@@ -7,7 +7,7 @@ import { Fields } from "./styles";
 export default function ChangePassword() {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader color="warning">
         <CardTitle title="Change Password" />
       </CardHeader>
 

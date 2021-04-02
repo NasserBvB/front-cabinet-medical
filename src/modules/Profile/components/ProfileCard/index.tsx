@@ -11,7 +11,7 @@ interface IProps {
 export default function ProfileCard({ togggleModification }: IProps) {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader color="success">
         <CardTitle title="Votre profile" />
       </CardHeader>
 

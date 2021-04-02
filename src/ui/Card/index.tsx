@@ -1,5 +1,6 @@
 import React, { HTMLAttributes, useState } from "react";
 import Flex from "ui/Flex";
+import { IColor } from "utils";
 import {
   ActionsWrapper,
   Desc,
@@ -27,10 +28,14 @@ export const Card = ({ children, ...rest }: CardWrapper) => {
 
 type CardHeaderProps = {
   children: React.ReactNode;
+  color?: IColor;
 };
 
-export const CardHeader = ({ children }: CardHeaderProps) => {
-  return <HeaderWrapper >{children}</HeaderWrapper>;
+export const CardHeader = ({
+  color = "primary",
+  children,
+}: CardHeaderProps) => {
+  return <HeaderWrapper color={color}>{children}</HeaderWrapper>;
 };
 
 type CardTitleProps = {
