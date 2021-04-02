@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
   align-items: center;
   row-gap: 20px;
   column-gap: 10px;
-  max-height: 75vh;
-  overflow-y: scroll;
+  max-height: 80vh;
+  overflow-y: auto;
 `;

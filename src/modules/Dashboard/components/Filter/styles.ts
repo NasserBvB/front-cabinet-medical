@@ -24,6 +24,8 @@ export const Results = styled.div`
     min-width: 40%;
   }
 
+  max-height: 80vh;
+  overflow-y: auto;
   /* align-items: center; */
 `;
 

@@ -49,7 +49,7 @@ export const Menu = styled.div`
     top: 40px;
     left: 25px;
     max-height: 90vh;
-    /* overflow-y: scroll; */
+    /* overflow-y: auto; */
     z-index: 6884;
   }
   color: ${({ theme: { palette } }) => palette.primary.main};
