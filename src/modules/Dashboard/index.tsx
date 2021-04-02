@@ -23,7 +23,11 @@ export default function Dashboard() {
         <AiOutlinePlus size="25px" />
       </FabButton>
       <Modal open={open} closeModal={handleCloseModal}>
-        <PatientForm handleClick={toggleModal} />
+        <PatientForm
+          type="create"
+          handleChange={handleCloseModal}
+          handleSubmit={handleFilter}
+        />
       </Modal>
     </Layout>
   );

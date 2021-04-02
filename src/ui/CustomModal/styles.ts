@@ -22,4 +22,6 @@ export const Wrapper = styled.div`
   @media (max-width: 600px) {
     min-width: 300px;
   }
+  max-height: 70vh;
+  overflow-y: auto;
 `;

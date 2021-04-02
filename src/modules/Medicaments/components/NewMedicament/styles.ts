@@ -14,7 +14,7 @@ export const Fields = styled.div`
   align-content: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(150px, 210px));
-  gap: 5px;
+  gap: 16px;
   padding: 16px;
   flex: 1;
 `;

@@ -20,3 +20,8 @@ export const Input = styled.input`
     outline: 0px;
   }
 `;
+
+export const Label = styled.label`
+  color: #9ba3bb;
+  margin-bottom: 5px;
+`;

@@ -26,12 +26,14 @@ export default function NewMedicament(props: IProps) {
           onChange={props.handleChange}
           name="nom"
           value={props.nom}
+          label="Le nom"
         />
         <Input
           placeholder="Le forme"
           onChange={props.handleChange}
           name="forme"
           value={props.forme}
+          label="La forme"
         />
       </Fields>
       <Actions>
