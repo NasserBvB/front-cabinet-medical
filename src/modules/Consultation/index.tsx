@@ -66,7 +66,7 @@ export default function Consultations() {
       <Wrapper>
         {meds &&
           meds.map((item) => {
-            return <p> {JSON.stringify(item)} </p>;
+            return <p key={item.id}> {JSON.stringify(item)} </p>;
           })}
       </Wrapper>
       <FabButton onClick={toggleModal}>
