@@ -41,8 +41,8 @@ export default function Filter({ cin, setCin, handleFilter }: IProps) {
         />
         <Divider width="100%" />
       </Header>
-      <Results>
         <strong>Results: </strong>
+      <Results>
         <Patient {...patient} />
         <Patient {...patient} />
         <Patient {...patient} />
