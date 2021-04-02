@@ -21,6 +21,7 @@ export const Select = styled.select`
 
 export const Label = styled.label`
   margin-bottom: 5px;
+  padding: 4px;
 `;
 
 export const Option = styled.option`

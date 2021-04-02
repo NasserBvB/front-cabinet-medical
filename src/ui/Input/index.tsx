@@ -1,11 +1,14 @@
 import { InputHTMLAttributes } from "react";
-import { Input as InputWrapper, Wrapper } from "./styles";
+import { Input as InputWrapper, Label, Wrapper } from "./styles";
 
-interface Iprops extends InputHTMLAttributes<HTMLInputElement> {}
+interface Iprops extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+}
 
-export default function Input({ ...rest }: Iprops) {
+export default function Input({ label, ...rest }: Iprops) {
   return (
     <Wrapper>
+      {label && <Label>{label}</Label>}
       <InputWrapper {...rest} />
     </Wrapper>
   );
