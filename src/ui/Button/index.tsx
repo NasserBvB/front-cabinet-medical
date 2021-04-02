@@ -15,7 +15,7 @@ export default function Button({ color = 'primary', variant = 'filled', children
 
   if (variant === 'text')
   {
-    outlined.backgroundColor = "#FFF";
+    outlined.backgroundColor = "";
     outlined.color = palette[color].dark;
   };
 

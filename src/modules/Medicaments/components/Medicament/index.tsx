@@ -27,14 +27,14 @@ export default function Medicament(props: Iprops) {
       <CardActions>
         <Button
           color="secondary"
-          variant="outlined"
+          variant="text"
           onClick={() => setOpen((cur) => !cur)}
         >
           <AiOutlineDelete size="20px" />
         </Button>
         <Button
           color="primary"
-          variant="outlined"
+          variant="text"
           onClick={() => props.handleUpdate()}
         >
           <AiOutlineSetting size="20px" />
