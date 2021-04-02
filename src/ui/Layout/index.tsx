@@ -49,9 +49,6 @@ export default function Layout({ children }: LayoutProps) {
             <Link to="/medicaments">
               <MenuItem>Medicaments</MenuItem>
             </Link>
-            <Link to="#">
-              <MenuItem>Autre</MenuItem>
-            </Link>
           </MenuItem>
           <hr />
 
