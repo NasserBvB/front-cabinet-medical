@@ -2,6 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import UserProvider from "modules/Authentication/providers/UserProvier";
 import ConsultationsPage from "pages/cosultation.page";
 import MedicamentsPage from "pages/medicaments.page";
+import ProfilePage from "pages/profile.page";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -18,6 +19,9 @@ ReactDOM.render(
             </Route>
             <Route path="/consultation" exact>
               <ConsultationsPage />
+            </Route>
+            <Route path="/profile" exact>
+              <ProfilePage />
             </Route>
             <Route path="/">
               <HomePage />
